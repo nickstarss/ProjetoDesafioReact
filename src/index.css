@@ -13,3 +13,8 @@
   --blue-dark: #1E6F9F;
   --danger: #E25858;
 }
+
+body{
+  margin: 0;
+  background-color: var(--gray-600);
+}
