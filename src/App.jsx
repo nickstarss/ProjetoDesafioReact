@@ -4,6 +4,7 @@ import Logo from "./assets/logo.svg"
 import Task from './component/Task'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquarePlus } from '@fortawesome/free-regular-svg-icons';
+import { faClipboard } from '@fortawesome/free-regular-svg-icons';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
 
       <form className={"searchbar"}>
         <input placeholder='Adicione uma nova tarefa'/>
-        <button>Criar</button>
+        <button>Criar<FontAwesomeIcon icon={faSquarePlus} /></button>
       </form>
 
       <div className={"tasks"}>
@@ -34,6 +35,7 @@ function App() {
 
         <div className={"tasks-list"}>
            {/* Place holder para quando não existir nenhuma tarefa */}
+           <FontAwesomeIcon icon={faClipboard} />
            <p>Você ainda não tem tarefas cadastradas</p>
            <p>Crie tarefas e organize seus itens a fazer</p>
 
