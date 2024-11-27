@@ -7,3 +7,32 @@
 .header{
     padding: 4.5rem;
 }
+
+.searchbar input{
+    padding: 1rem;
+    width: 30rem;
+    background-color: var(--gray-500);
+    border: none;
+    border-radius: 0.5rem;
+    margin-right: 0.5rem;
+    color: white;
+}
+
+.searchbar button{
+    padding: 1rem;
+    color: white;
+    background-color: var(--blue-dark);
+    border: none;
+    border-radius: 0.5rem;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.searchbar button::placeholder{
+    color: var(--gray-300);
+}
+
+.searchbar button:hover{
+    background-color: var(--blue);
+}
