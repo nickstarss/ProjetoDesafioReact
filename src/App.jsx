@@ -2,6 +2,8 @@ import './App.css'
 import Logo from "./assets/logo.svg"
 
 import Task from './component/Task'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSquarePlus } from '@fortawesome/free-regular-svg-icons';
 
 function App() {
   return (
