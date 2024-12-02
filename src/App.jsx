@@ -1,5 +1,6 @@
 import './App.css'
 import Logo from "./assets/logo.svg"
+import Clipboard from "./assets/Clipboard.svg"
 
 import Task from './component/Task'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -22,20 +23,20 @@ function App() {
         <div className={"tasks-info"}>
           <div className={"tasks-info-1"}>
             <p>Tarefas criadas</p>
-            <p>0</p>
+            <p className={"task-info-cont"}>10</p>
           </div>
 
           <div className={"tasks-info-2"}>
             <p>Concluídas</p>
-            <p>10</p>
+            <p className={"task-info-cont"}>0 de 10</p>
           </div>
 
-          <hr/>
         </div>
 
         <div className={"tasks-list"}>
+           <hr/>
            {/* Place holder para quando não existir nenhuma tarefa */}
-           <FontAwesomeIcon icon={faClipboard} />
+           <img src={Clipboard}/>
            <p>Você ainda não tem tarefas cadastradas</p>
            <p>Crie tarefas e organize seus itens a fazer</p>
 

@@ -42,3 +42,42 @@
 .searchbar button:hover{
     background-color: var(--blue);
 }
+
+.tasks{
+    width: 47%;
+    margin-top: 4rem;
+}
+
+.tasks-info{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasks-info-1 {
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tasks-info-1 p:first-child{
+    color: var(--blue);
+    margin-right: 0.5rem;
+}
+
+.tasks-info-2{
+    display: flex;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.tasks-info-2 p:first-child{
+    color: var(--purple);
+    margin-right: 0.5rem;
+}
+
+.task-info-cont{
+    color: var(--gray-200);
+    background-color: var(--gray-400);
+    padding: 2px 8px;
+    border-radius: 999px;
+}
