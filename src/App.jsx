@@ -37,13 +37,16 @@ function App() {
           {/* Place holder para quando não existir nenhuma tarefa */}
           <div className={"tasks-list-empty"}>
             <hr/>
-            <img src={Clipboard}/>
-            <p>Você ainda não tem tarefas cadastradas</p>
-            <p>Crie tarefas e organize seus itens a fazer</p>
+
+            <div className={"sub-tasks-list-empty"}>
+              <img src={Clipboard}/>
+              <p>Você ainda não tem tarefas cadastradas</p>
+              <p>Crie tarefas e organize seus itens a fazer</p>
+            </div>
           </div>
 
            {/* Tasks */}
-           <div className={"tasks-list-empty"}>
+           <div className={"tasks-list-complete"}>
             <Task content="conteudo"/>
            </div>
         </div>

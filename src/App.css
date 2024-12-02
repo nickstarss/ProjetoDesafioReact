@@ -81,3 +81,31 @@
     padding: 2px 8px;
     border-radius: 999px;
 }
+
+.tasks-list-empty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tasks-list-empty hr{
+    width: 100%;
+    border-color: var(--gray-400);
+}
+
+.sub-tasks-list-empty{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem;
+}
+
+.sub-tasks-list-empty p{
+    color: var(--gray-300);
+    margin: 1rem 0rem;
+}
+
+.sub-tasks-list-empty p:last-child{
+    font-weight: bold;
+    margin: 0;
+}
