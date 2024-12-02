@@ -20,13 +20,19 @@
 
 .searchbar button{
     padding: 1rem;
-    color: white;
     background-color: var(--blue-dark);
     border: none;
     border-radius: 0.5rem;
 
+    color: white;
+    font-weight: bold;
+
     cursor: pointer;
     transition: 0.3s;
+}
+
+.searchbar-img{
+    margin-left: 0.5rem;
 }
 
 .searchbar button::placeholder{

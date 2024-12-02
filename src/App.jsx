@@ -15,7 +15,7 @@ function App() {
 
       <form className={"searchbar"}>
         <input placeholder='Adicione uma nova tarefa'/>
-        <button>Criar<FontAwesomeIcon icon={faSquarePlus} /></button>
+        <button>Criar<FontAwesomeIcon icon={faSquarePlus} className={"searchbar-img"}/></button>
       </form>
 
       <div className={"tasks"}>
