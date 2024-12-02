@@ -34,14 +34,18 @@ function App() {
         </div>
 
         <div className={"tasks-list"}>
-           <hr/>
-           {/* Place holder para quando não existir nenhuma tarefa */}
-           <img src={Clipboard}/>
-           <p>Você ainda não tem tarefas cadastradas</p>
-           <p>Crie tarefas e organize seus itens a fazer</p>
+          {/* Place holder para quando não existir nenhuma tarefa */}
+          <div className={"tasks-list-empty"}>
+            <hr/>
+            <img src={Clipboard}/>
+            <p>Você ainda não tem tarefas cadastradas</p>
+            <p>Crie tarefas e organize seus itens a fazer</p>
+          </div>
 
            {/* Tasks */}
-           <Task content="conteudo"/>
+           <div className={"tasks-list-empty"}>
+            <Task content="conteudo"/>
+           </div>
         </div>
       </div>
     </div>
