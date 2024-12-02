@@ -5,9 +5,16 @@ import Clipboard from "./assets/Clipboard.svg"
 import Task from './component/Task'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquarePlus } from '@fortawesome/free-regular-svg-icons';
-import { faClipboard } from '@fortawesome/free-regular-svg-icons';
+
+import React, { useState } from "react";
 
 function App() {
+  const [tasks, setTasks] = useState([
+    {
+      id: 1,
+      cont: "tarefa 1 criada"
+    }
+  ]);
   return (
     <div className={"body"}>
       <div className={"header"}>
@@ -34,21 +41,23 @@ function App() {
         </div>
 
         <div className={"tasks-list"}>
-          {/* Place holder para quando não existir nenhuma tarefa */}
-          <div className={"tasks-list-empty"}>
-            <hr/>
+          {tasks.length === 0 ? (
+            /* Place holder para quando não existir nenhuma tarefa */
+            <div className={"tasks-list-empty"}>
+              <hr/>
 
-            <div className={"sub-tasks-list-empty"}>
-              <img src={Clipboard}/>
-              <p>Você ainda não tem tarefas cadastradas</p>
-              <p>Crie tarefas e organize seus itens a fazer</p>
+              <div className={"sub-tasks-list-empty"}>
+                <img src={Clipboard}/>
+                <p>Você ainda não tem tarefas cadastradas</p>
+                <p>Crie tarefas e organize seus itens a fazer</p>
+              </div>
             </div>
-          </div>
-
-           {/* Tasks */}
-           <div className={"tasks-list-complete"}>
-            <Task content="conteudo"/>
-           </div>
+            ):(
+              /* Tasks */
+              <div className={"tasks-list-complete"}>
+              <Task content="conteudo"/>
+              </div>
+            )}
         </div>
       </div>
     </div>
