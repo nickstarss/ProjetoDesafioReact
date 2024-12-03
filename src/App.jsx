@@ -12,7 +12,13 @@ function App() {
   const [tasks, setTasks] = useState([
     {
       id: 1,
-      cont: "tarefa 1 criada"
+      cont: "tarefa 1 criada",
+      done: false
+    },
+    {
+      id: 2,
+      cont: "tarefa 2 criada",
+      done: true
     }
   ]);
   return (
@@ -30,12 +36,12 @@ function App() {
         <div className={"tasks-info"}>
           <div className={"tasks-info-1"}>
             <p>Tarefas criadas</p>
-            <p className={"task-info-cont"}>10</p>
+            <p className={"task-info-cont"}>{tasks.length}</p>
           </div>
 
           <div className={"tasks-info-2"}>
             <p>Concluídas</p>
-            <p className={"task-info-cont"}>0 de 10</p>
+            <p className={"task-info-cont"}>{tasks.filter(task => task.done).length} de {tasks.length}</p>
           </div>
 
         </div>
@@ -55,7 +61,12 @@ function App() {
             ):(
               /* Tasks */
               <div className={"tasks-list-complete"}>
-              <Task content="conteudo"/>
+                {tasks.map((task) => {
+                  return(
+                    <Task content={task.cont}/>
+                  )
+                })}
+
               </div>
             )}
         </div>
