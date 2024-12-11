@@ -16,6 +16,11 @@
     border-radius: 0.5rem;
     margin-right: 0.5rem;
     color: white;
+    transition: 0.3s;
+}
+
+.searchbar input:focus{
+    border: 1px solid var(--purple) !important;
 }
 
 .searchbar button{

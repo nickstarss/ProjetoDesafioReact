@@ -21,6 +21,7 @@ body{
 
 input:focus {
   outline: none;
-  border: 1px solid var(--purple) !important;
+  border: none;
 }
+
 
