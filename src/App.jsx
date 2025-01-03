@@ -6,7 +6,7 @@ import Task from './component/Task'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSquarePlus } from '@fortawesome/free-regular-svg-icons';
 
-import React, { useState } from "react";
+import { useState } from "react";
 
 function App() {
   const [tasks, setTasks] = useState([
@@ -21,15 +21,41 @@ function App() {
       done: true
     }
   ]);
+
+  const [newTask, setNewTask] = useState("");
+
+  const submitNewTask = (event) => {
+    event.preventDefault();
+    console.log(`The content you inputed was ${newTask}`);
+    console.log(tasks);
+
+    const newTaskObject = {
+      id: tasks.length + 1, // Gera um novo ID
+      cont: newTask,
+      done: false, // Tarefa começa como não concluída
+    };
+
+    setTasks([...tasks, newTaskObject]);
+
+    setNewTask("");
+  }
   return (
     <div className={"body"}>
       <div className={"header"}>
         <img src={Logo} />
       </div>
 
-      <form className={"searchbar"}>
-        <input placeholder='Adicione uma nova tarefa'/>
-        <button>Criar<FontAwesomeIcon icon={faSquarePlus} className={"searchbar-img"}/></button>
+      <form className={"searchbar"} onSubmit={submitNewTask}>
+        <input
+          type="text"
+          value={newTask}
+          placeholder='Adicione uma nova tarefa'
+          onChange={(e) => setNewTask(e.target.value)}
+        />
+        <button type='submit'>
+          Criar
+          <FontAwesomeIcon icon={faSquarePlus} className={"searchbar-img"}/>
+        </button>
       </form>
 
       <div className={"tasks"}>
@@ -63,7 +89,7 @@ function App() {
               <div className={"tasks-list-complete"}>
                 {tasks.map((task) => {
                   return(
-                    <Task content={task.cont}/>
+                    <Task content={task.cont} key={task.id}/>
                   )
                 })}
 
